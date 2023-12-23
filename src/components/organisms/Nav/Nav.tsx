@@ -64,7 +64,7 @@ const nav_base = (theme: Theme) => css`
     background-color: ${theme.palette.background.paper};
     color: ${theme.palette.text.primary};
   }
-  .logo a{
+  .logo a {
     display: flex;
     align-items: center;
     float: left;
@@ -127,7 +127,7 @@ const StyledNav: FC<NavProps> = ({
 
   return (
     <div {...props}>
-        <span className='logo'>{logo && logo}</span>
+      <span className='logo'>{logo && logo}</span>
 
       {search && search}
 
@@ -156,7 +156,7 @@ const StyledNav: FC<NavProps> = ({
 
 export const Nav = styled(StyledNav)`
   ${(props) => nav_base(props.theme)}
-  ${(props) => props.theme.breakpoints.down('sm')} {
+  ${(props) => props.theme.breakpoints.down('md')} {
     ${(props) => mobile_styles(props.theme)}
   }
 `;
